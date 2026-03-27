@@ -62,7 +62,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
   glow.style.cssText = `
     position: fixed; pointer-events: none; z-index: 9999;
     width: 300px; height: 300px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(10,173,168,0.07) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(79,70,229,0.07) 0%, transparent 70%);
     transform: translate(-50%, -50%);
     transition: opacity 0.3s ease;
     opacity: 0;
