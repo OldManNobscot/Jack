@@ -464,8 +464,8 @@ img { max-width: 100%; display: block; }
   border-color: transparent;
   color: var(--white);
 }
-.info-card-accent h3 { color: var(--white); }
-.info-card-accent p { color: rgba(255,255,255,0.95); }
+.info-card.info-card-accent h3 { color: var(--white); }
+.info-card.info-card-accent p { color: rgba(255,255,255,0.95); }
 .info-card-icon { font-size: 2rem; margin-bottom: 0.75rem; }
 .info-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark); }
 .info-card p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.6; }
