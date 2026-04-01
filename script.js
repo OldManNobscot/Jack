@@ -12,8 +12,9 @@ window.addEventListener('scroll', () => {
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+  const isOpen = navLinks.classList.toggle('open');
   hamburger.classList.toggle('active');
+  hamburger.setAttribute('aria-expanded', isOpen);
 });
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
@@ -42,19 +43,8 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// --- Contact form handler ---
-function handleForm(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-  setTimeout(() => {
-    document.getElementById('form-success').classList.remove('hidden');
-    e.target.reset();
-    btn.textContent = 'Send Message ✉️';
-    btn.disabled = false;
-  }, 1200);
-}
+// --- Dynamic copyright year ---
+document.getElementById('year').textContent = new Date().getFullYear();
 
 // --- Cursor glow effect (desktop only) ---
 if (window.matchMedia('(pointer: fine)').matches) {

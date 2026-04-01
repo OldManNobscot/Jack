@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a href="#about" class="skip-link">Skip to main content</a>
 
   <!-- NAV -->
   <nav id="navbar">
@@ -21,7 +22,7 @@
         <li><a href="#honors">Honors</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -121,7 +122,7 @@
               <span class="highlight-icon">📍</span>
               <div>
                 <strong>Framingham, MA</strong>
-                <span>15 Harrington Rd, 01701</span>
+                <span>Greater Boston Area</span>
               </div>
             </div>
             <div class="highlight">
@@ -565,7 +566,7 @@
         <span class="footer-logo">JB</span>
         <p>Jack Berry &bull; Brandeis University &bull; Biochemistry · Pre-Med · Class of 2027</p>
       </div>
-      <p class="footer-copy">© 2026 Jack Berry. Framingham born, science driven.</p>
+      <p class="footer-copy">© <span id="year"></span> Jack Berry. Framingham born, science driven.</p>
     </div>
   </footer>
 
